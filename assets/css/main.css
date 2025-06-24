@@ -1688,3 +1688,36 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# TLI Section
+--------------------------------------------------------------*/
+.tli-schedule-item {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.tli-schedule-item:last-child {
+  border-bottom: none;
+}
+.tli-divider {
+  position: absolute;
+  left: 16.666667%; /* Approximately where col-md-2 ends */
+  top: 20%;
+  bottom: 20%;
+  width: 0;
+  border-left: 0.5px solid var(--heading-color, #2c3e50);
+}
+.tli-content {
+  padding-right: 20px;
+}
+
+.class-description {
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 0;
+}
+
+/* .workshop-speakers {
+  justify-content: center;
+} */
