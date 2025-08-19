@@ -161,12 +161,15 @@
       .acp-header-row {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         min-height: 60px;
         padding: 0 15px;
       }
       
       /* Logo Section */
+      .acp-logo-section {
+        flex: 1;
+      }
+      
       .acp-logo-section a {
         display: flex;
         align-items: center;
@@ -191,7 +194,9 @@
       .acp-nav-section {
         display: none;
         align-items: center;
-        gap: 30px;
+        gap: 25px;
+        margin-right: 20px;
+        margin-left: 30px;
       }
       
       .acp-nav-link {
@@ -287,8 +292,8 @@
         cursor: pointer;
       }
       
-      /* Desktop View (≥ 680px) */
-      @media (min-width: 680px) {
+      /* Desktop View (≥ 715px) */
+      @media (min-width: 715px) {
         .acp-nav-section {
           display: flex;
         }
@@ -302,11 +307,23 @@
         }
       }
       
-      /* Mobile View (< 680px) */
-      @media (max-width: 679px) {
+      /* Hide logo text at 875px and below */
+      @media (max-width: 875px) {
+        .acp-logo-text {
+          display: none;
+        }
+        
+        .acp-nav-section {
+          margin-left: 20px;
+        }
+      }
+      
+      /* Mobile View (< 715px) */
+      @media (max-width: 714px) {
         .acp-logo-text {
           font-size: 0.75rem;
           max-width: 180px;
+          display: none;
         }
       }
       
@@ -440,8 +457,8 @@
                   <div class="speaker">
                     <img src="assets/img/speakers/speaker-2-2.jpg" alt="" />
                   </div>
-                  <h4>Leadership Certificate Program <span>*Additional Cost</span></h4>
-                  <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                  <h4>Leadership Certificate Program <span>*Preregistration required with fee</span></h4>
+                  <p>Communicating at the Top of Your Game</p>
                 </div>
               </div>
 
@@ -452,7 +469,6 @@
                     <img src="assets/img/speakers/speaker-3-2.jpg" alt="Cole Emmerich" />
                   </div>
                   <h4>Rising Stars Orientation Meeting</h4>
-                  <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
                 </div>
               </div>
 
@@ -462,7 +478,7 @@
                   <div class="speaker">
                     <img src="assets/img/welcomeReception.jpg" alt="" />
                   </div>
-                  <h4>Welcome Reception</h4>
+                  <h4><a href="/evening-events.html">Reception</a></h4>
                   <p>Mix & Mingle in Mobile</p>
                 </div>
               </div>
