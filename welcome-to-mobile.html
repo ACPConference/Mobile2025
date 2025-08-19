@@ -37,61 +37,153 @@
 <body class="welcome-mobile-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between" style="min-height: 60px;">
+      
+      <!-- Logo and Site Name Box (Left) -->
+      <div class="logo-container d-flex align-items-center" style="max-width: 280px;">
+        <a href="index.html" class="d-flex align-items-center text-decoration-none">
+          <img src="assets/img/acpLogo.png" alt="ACP Logo" style="height: 40px; width: auto;" />
+          <h1 class="sitename ms-2 mb-0 lh-1" style="font-size: 0.85rem; line-height: 1.1; word-wrap: break-word;">
+            Association of Community Publishers
+          </h1>
+        </a>
+      </div>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/acpLogo.png" alt="">
-        <!-- Uncomment the line below if you also wish to use an text logo -->
-        <h1 class="sitename">Association of Community Publishers</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="index.html#hero">Home</a>
-          </li>
-          <li class="dropdown">
-            <a href="#"><span>Conference</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="index.html#schedule">Schedule</a></li>      
-              <li><a href="index.html#speakers">Speakers</a></li>
-              <li><a href="index.html#leadership">Leadership Program</a></li>
-              <li><a href="index.html#tli">TLI Classes</a></li>
-              <li><a href="index.html#venue">Venue</a></li>
-              <li><a href="index.html#sponsors">Sponsors</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#"><span>Events</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="welcome-to-mobile.html">Welcome to Mobile</a></li>
-              <li><a href="evening-events.html">Evening Events</a></li>
-              <li><a href="mardi-gras-celebration.html">Mardi Gras Celebration</a></li>
-              <li><a href="mobile-sites-tour.html">Mobile Sites Tour</a></li>
-              <li><a href="auction.html">Auction</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#"><span>Daily Publish</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="day1.html">Day 1</a></li>
-              <li><a href="day2.html">Day 2</a></li>
-              <li><a href="day3.html">Day 3</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <!-- Desktop Navigation (Center) -->
+      <nav class="navbar-nav d-flex flex-row align-items-center" style="display: none !important;">
+        <div class="nav-item dropdown mx-2">
+          <a href="index.html#hero" class="nav-link active">Home</a>
+        </div>
+        <div class="nav-item dropdown mx-2">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Conference</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#schedule" class="dropdown-item">Schedule</a></li>      
+            <li><a href="index.html#speakers" class="dropdown-item">Speakers</a></li>
+            <li><a href="index.html#leadership" class="dropdown-item">Leadership Program</a></li>
+            <li><a href="index.html#tli" class="dropdown-item">TLI Classes</a></li>
+            <li><a href="index.html#venue" class="dropdown-item">Venue</a></li>
+            <li><a href="index.html#sponsors" class="dropdown-item">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="nav-item dropdown mx-2">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Events</a>
+          <ul class="dropdown-menu">
+            <li><a href="welcome-to-mobile.html" class="dropdown-item">Welcome to Mobile</a></li>
+            <li><a href="evening-events.html" class="dropdown-item">Evening Events</a></li>
+            <li><a href="mardi-gras-celebration.html" class="dropdown-item">Mardi Gras Celebration</a></li>
+            <li><a href="mobile-sites-tour.html" class="dropdown-item">Mobile Sites Tour</a></li>
+            <li><a href="auction.html" class="dropdown-item">Auction</a></li>
+          </ul>
+        </div>
+        <div class="nav-item dropdown mx-2">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Daily Publish</a>
+          <ul class="dropdown-menu">
+            <li><a href="day1.html" class="dropdown-item">Day 1</a></li>
+            <li><a href="day2.html" class="dropdown-item">Day 2</a></li>
+            <li><a href="day3.html" class="dropdown-item">Day 3</a></li>
+          </ul>
+        </div>
       </nav>
 
-      <a
-        class="cta-btn d-none d-sm-block"
-        href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com"
-        >Register</a>
+      <!-- Register Button (Desktop) -->
+      <a class="cta-btn text-decoration-none" style="display: none !important;"
+         href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com">
+        Register
+      </a>
+
+      <!-- Mobile Menu Button (Always visible on far right) -->
+      <button class="mobile-nav-toggle border-0 bg-transparent p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav">
+        <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+      </button>
+
+      <!-- Mobile Navigation Offcanvas -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="index.html#hero" class="nav-link">Home</a>
+            </li>
+            <li class="mb-2">
+              <a class="nav-link" data-bs-toggle="collapse" href="#conferenceCollapse">
+                Conference <i class="bi bi-chevron-down"></i>
+              </a>
+              <div class="collapse" id="conferenceCollapse">
+                <ul class="list-unstyled ps-3">
+                  <li><a href="index.html#schedule" class="nav-link">Schedule</a></li>
+                  <li><a href="index.html#speakers" class="nav-link">Speakers</a></li>
+                  <li><a href="index.html#leadership" class="nav-link">Leadership Program</a></li>
+                  <li><a href="index.html#tli" class="nav-link">TLI Classes</a></li>
+                  <li><a href="index.html#venue" class="nav-link">Venue</a></li>
+                  <li><a href="index.html#sponsors" class="nav-link">Sponsors</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-2">
+              <a class="nav-link" data-bs-toggle="collapse" href="#eventsCollapse">
+                Events <i class="bi bi-chevron-down"></i>
+              </a>
+              <div class="collapse" id="eventsCollapse">
+                <ul class="list-unstyled ps-3">
+                  <li><a href="welcome-to-mobile.html" class="nav-link">Welcome to Mobile</a></li>
+                  <li><a href="evening-events.html" class="nav-link">Evening Events</a></li>
+                  <li><a href="mardi-gras-celebration.html" class="nav-link">Mardi Gras Celebration</a></li>
+                  <li><a href="mobile-sites-tour.html" class="nav-link">Mobile Sites Tour</a></li>
+                  <li><a href="auction.html" class="nav-link">Auction</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-2">
+              <a class="nav-link" data-bs-toggle="collapse" href="#dailyCollapse">
+                Daily Publish <i class="bi bi-chevron-down"></i>
+              </a>
+              <div class="collapse" id="dailyCollapse">
+                <ul class="list-unstyled ps-3">
+                  <li><a href="day1.html" class="nav-link">Day 1</a></li>
+                  <li><a href="day2.html" class="nav-link">Day 2</a></li>
+                  <li><a href="day3.html" class="nav-link">Day 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-4">
+              <a class="btn btn-primary w-100" 
+                 href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com">
+                Register
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
     </div>
   </header>
+
+  <style>
+    @media (min-width: 680px) {
+      .navbar-nav {
+        display: flex !important;
+      }
+      .cta-btn {
+        display: block !important;
+      }
+    }
+    
+    .sitename {
+      max-width: 200px;
+    }
+    
+    @media (max-width: 479px) {
+      .sitename {
+        font-size: 0.75rem !important;
+      }
+      .logo-container {
+        max-width: 240px !important;
+      }
+    }
+  </style>
 
   <main class="main">
 

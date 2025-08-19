@@ -38,35 +38,35 @@
 
   <body class="index-page">
     <header id="header" class="header d-flex align-items-center fixed-top">
-      <div class="container-fluid container-xl position-relative d-flex align-items-center">
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <img src="assets/img/acpLogo.png" alt="" />
-          <!-- Uncomment the line below if you also wish to use an text logo -->
-          <h1 class="sitename">Association of Community Publishers</h1>
-        </a>
+      <div class="container-fluid d-flex align-items-center justify-content-between" style="min-height: 60px;">
+        
+        <!-- Logo and Site Name Box (Left) -->
+        <div class="logo-container d-flex align-items-center" style="max-width: 280px;">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <img src="assets/img/acpLogo.png" alt="ACP Logo" style="height: 40px; width: auto;" />
+            <h1 class="sitename ms-2 mb-0 lh-1" style="font-size: 0.85rem; line-height: 1.1; word-wrap: break-word;">
+              Association of Community Publishers
+            </h1>
+          </a>
+        </div>
 
+        <!-- Desktop Navigation -->
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
-              <a href="#hero" class="active">Home<br /></a>
+              <a href="#hero" class="active">Home</a>
             </li>
-            <!-- <li><a href="#speakers">Speakers</a></li> -->
-            <!-- <li><a href="#schedule">Schedule</a></li> -->
-            <!-- <li><a href="#venue">Venue</a></li> -->
-            <!-- <li><a href="#gallery">Gallery</a></li> -->
             <li class="dropdown">
               <a href="#"><span>Conference</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#schedule">Schedule</a></li>      
                 <li><a href="#speakers">Speakers</a></li>
-                 <li><a href="#leadership">Leadership Program</a></li>
-                                  <li><a href="#tli">TLI Classes</a></li>
-
+                <li><a href="#leadership">Leadership Program</a></li>
+                <li><a href="#tli">TLI Classes</a></li>
                 <li><a href="#venue">Venue</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
               </ul>
             </li>
-
             <li class="dropdown">
               <a href="#"><span>Events</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
@@ -74,12 +74,10 @@
                 <li><a href="evening-events.html">Evening Events</a></li>
                 <li><a href="mardi-gras-celebration.html">Mardi Gras Celebration</a></li>
                 <li><a href="mobile-sites-tour.html">Mobile Sites Tour</a></li>
-                                <li><a href="auction.html">Auction</a></li>
-
+                <li><a href="auction.html">Auction</a></li>
               </ul>
             </li>
-
-<li class="dropdown">
+            <li class="dropdown">
               <a href="#"><span>Daily Publish</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="day1.html">Day 1</a></li>
@@ -87,19 +85,119 @@
                 <li><a href="day3.html">Day 3</a></li>
               </ul>
             </li>
-
-
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a
-          class="cta-btn d-none d-sm-block"
-          href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com"
-          >Register</a
-        >
+        <!-- Register Button -->
+        <a class="cta-btn d-none d-sm-block"
+           href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com">
+          Register
+        </a>
+
+        <!-- Mobile Navigation Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#hero" class="nav-link">Home</a>
+              </li>
+              <li class="mb-2">
+                <a class="nav-link" data-bs-toggle="collapse" href="#conferenceCollapse">
+                  Conference <i class="bi bi-chevron-down"></i>
+                </a>
+                <div class="collapse" id="conferenceCollapse">
+                  <ul class="list-unstyled ps-3">
+                    <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                    <li><a href="#speakers" class="nav-link">Speakers</a></li>
+                    <li><a href="#leadership" class="nav-link">Leadership Program</a></li>
+                    <li><a href="#tli" class="nav-link">TLI Classes</a></li>
+                    <li><a href="#venue" class="nav-link">Venue</a></li>
+                    <li><a href="#sponsors" class="nav-link">Sponsors</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-2">
+                <a class="nav-link" data-bs-toggle="collapse" href="#eventsCollapse">
+                  Events <i class="bi bi-chevron-down"></i>
+                </a>
+                <div class="collapse" id="eventsCollapse">
+                  <ul class="list-unstyled ps-3">
+                    <li><a href="welcome-to-mobile.html" class="nav-link">Welcome to Mobile</a></li>
+                    <li><a href="evening-events.html" class="nav-link">Evening Events</a></li>
+                    <li><a href="mardi-gras-celebration.html" class="nav-link">Mardi Gras Celebration</a></li>
+                    <li><a href="mobile-sites-tour.html" class="nav-link">Mobile Sites Tour</a></li>
+                    <li><a href="auction.html" class="nav-link">Auction</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-2">
+                <a class="nav-link" data-bs-toggle="collapse" href="#dailyCollapse">
+                  Daily Publish <i class="bi bi-chevron-down"></i>
+                </a>
+                <div class="collapse" id="dailyCollapse">
+                  <ul class="list-unstyled ps-3">
+                    <li><a href="day1.html" class="nav-link">Day 1</a></li>
+                    <li><a href="day2.html" class="nav-link">Day 2</a></li>
+                    <li><a href="day3.html" class="nav-link">Day 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mt-4">
+                <a class="btn btn-primary w-100" 
+                   href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com">
+                  Register
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </header>
+
+    <style>
+      /* Override theme's 1200px breakpoint to use 680px instead */
+      @media (min-width: 680px) {
+        .navmenu {
+          padding: 0;
+        }
+        
+        .navmenu ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          list-style: none;
+          align-items: center;
+        }
+        
+        .navmenu > ul > li {
+          white-space: nowrap;
+          padding: 15px 14px;
+        }
+        
+        .navmenu > ul > li:last-child {
+          padding-right: 0;
+        }
+      }
+      
+      .sitename {
+        max-width: 200px;
+      }
+      
+      @media (max-width: 479px) {
+        .sitename {
+          font-size: 0.75rem !important;
+        }
+        .logo-container {
+          max-width: 240px !important;
+        }
+      }
+    </style>
 
     <!-- START OF THE BODY - KEEP HERO SECTION FIRST, THEN SCHEDULE AND SO ON -->
 
@@ -419,7 +517,7 @@
                 <img src="assets/img/guyTasakaResize.jpg" class="img-fluid" alt="" />
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4><a href="speaker-details.html">Guy Tasaka</a></h4>
+                    <h4><a href="guy-tasaka.html">Guy Tasaka</a></h4>
                     <span>Keynote Speaker</span>
                   </div>
                   <div class="social">
@@ -438,7 +536,7 @@
                 <img src="assets/img/rossFurukaraResize.jpg" class="img-fluid" alt="" />
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4><a href="speaker-details.html">Ross Furukara</a></h4>
+                    <h4><a href="ross-furukawa.html">Ross Furukawa</a></h4>
                     <span>Keynote Speaker</span>
                   </div>
                   <div class="social">
