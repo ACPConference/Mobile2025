@@ -37,8 +37,171 @@
   </head>
 
   <body class="index-page">
-    <!-- ACP Modular Header -->
-    <div id="acp-header-container"></div>
+    <header id="header" class="header-acp">
+      <div class="header-acp__container container-fluid">
+        
+        <!-- Logo and Site Name Group (Left) -->
+        <div class="header-acp__logo-group">
+          <a href="index.html" class="header-acp__logo-link">
+            <img src="assets/img/acpLogo.png" alt="ACP Logo" class="header-acp__logo" />
+            <h1 class="header-acp__logo-text">
+              Association of Community Publishers
+            </h1>
+          </a>
+        </div>
+
+        <!-- Navigation Group (Right) -->
+        <div class="header-acp__nav-group">
+          
+          <!-- Desktop Navigation -->
+          <nav class="header-acp__nav-desktop">
+            <ul class="header-acp__nav-list">
+              <li class="header-acp__nav-item">
+                <a href="index.html#hero" class="header-acp__nav-link active">Home</a>
+              </li>
+              <li class="header-acp__nav-item header-acp__dropdown">
+                <a href="#" class="header-acp__nav-link">
+                  Conference <i class="bi bi-chevron-down header-acp__nav-icon"></i>
+                </a>
+                <ul class="header-acp__dropdown-menu">
+                  <li><a href="index.html#schedule" class="header-acp__dropdown-item">Schedule</a></li>      
+                  <li><a href="index.html#speakers" class="header-acp__dropdown-item">Speakers</a></li>
+                  <li><a href="index.html#leadership" class="header-acp__dropdown-item">Leadership Program</a></li>
+                  <li><a href="index.html#tli" class="header-acp__dropdown-item">TLI Classes</a></li>
+                  <li><a href="index.html#venue" class="header-acp__dropdown-item">Venue</a></li>
+                  <li><a href="index.html#sponsors" class="header-acp__dropdown-item">Sponsors</a></li>
+                </ul>
+              </li>
+              <li class="header-acp__nav-item header-acp__dropdown">
+                <a href="#" class="header-acp__nav-link">
+                  Events <i class="bi bi-chevron-down header-acp__nav-icon"></i>
+                </a>
+                <ul class="header-acp__dropdown-menu">
+                  <li><a href="welcome-to-mobile.html" class="header-acp__dropdown-item">Welcome to Mobile</a></li>
+                  <li><a href="evening-events.html" class="header-acp__dropdown-item">Evening Events</a></li>
+                  <li><a href="mardi-gras-celebration.html" class="header-acp__dropdown-item">Mardi Gras Celebration</a></li>
+                  <li><a href="mobile-sites-tour.html" class="header-acp__dropdown-item">Mobile Sites Tour</a></li>
+                  <li><a href="auction.html" class="header-acp__dropdown-item">Auction</a></li>
+                </ul>
+              </li>
+              <li class="header-acp__nav-item header-acp__dropdown">
+                <a href="#" class="header-acp__nav-link">
+                  Daily Publish <i class="bi bi-chevron-down header-acp__nav-icon"></i>
+                </a>
+                <ul class="header-acp__dropdown-menu">
+                  <li><a href="day1.html" class="header-acp__dropdown-item">Day 1</a></li>
+                  <li><a href="day2.html" class="header-acp__dropdown-item">Day 2</a></li>
+                  <li><a href="day3.html" class="header-acp__dropdown-item">Day 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Register Button (Desktop) -->
+          <a class="header-acp__register-btn"
+             href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com">
+            Register
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-acp__mobile-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav">
+            <i class="bi bi-list"></i>
+          </button>
+
+        </div>
+
+        <!-- Mobile Navigation Offcanvas -->
+        <div class="offcanvas offcanvas-end header-acp__offcanvas" tabindex="-1" id="mobileNav">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body header-acp__offcanvas-body">
+            <ul class="header-acp__mobile-nav-list">
+              <li class="header-acp__mobile-nav-item">
+                <a href="index.html#hero" class="header-acp__mobile-nav-link">Home</a>
+              </li>
+              <li class="header-acp__mobile-nav-item">
+                <a class="header-acp__mobile-nav-link" data-bs-toggle="collapse" href="#conferenceCollapse">
+                  Conference <i class="bi bi-chevron-down"></i>
+                </a>
+                <div class="collapse header-acp__mobile-dropdown" id="conferenceCollapse">
+                  <ul class="header-acp__mobile-dropdown-list">
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="index.html#schedule" class="header-acp__mobile-dropdown-link">Schedule</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="index.html#speakers" class="header-acp__mobile-dropdown-link">Speakers</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="index.html#leadership" class="header-acp__mobile-dropdown-link">Leadership Program</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="index.html#tli" class="header-acp__mobile-dropdown-link">TLI Classes</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="index.html#venue" class="header-acp__mobile-dropdown-link">Venue</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="index.html#sponsors" class="header-acp__mobile-dropdown-link">Sponsors</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header-acp__mobile-nav-item">
+                <a class="header-acp__mobile-nav-link" data-bs-toggle="collapse" href="#eventsCollapse">
+                  Events <i class="bi bi-chevron-down"></i>
+                </a>
+                <div class="collapse header-acp__mobile-dropdown" id="eventsCollapse">
+                  <ul class="header-acp__mobile-dropdown-list">
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="welcome-to-mobile.html" class="header-acp__mobile-dropdown-link">Welcome to Mobile</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="evening-events.html" class="header-acp__mobile-dropdown-link">Evening Events</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="mardi-gras-celebration.html" class="header-acp__mobile-dropdown-link">Mardi Gras Celebration</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="mobile-sites-tour.html" class="header-acp__mobile-dropdown-link">Mobile Sites Tour</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="auction.html" class="header-acp__mobile-dropdown-link">Auction</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header-acp__mobile-nav-item">
+                <a class="header-acp__mobile-nav-link" data-bs-toggle="collapse" href="#dailyCollapse">
+                  Daily Publish <i class="bi bi-chevron-down"></i>
+                </a>
+                <div class="collapse header-acp__mobile-dropdown" id="dailyCollapse">
+                  <ul class="header-acp__mobile-dropdown-list">
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="day1.html" class="header-acp__mobile-dropdown-link">Day 1</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="day2.html" class="header-acp__mobile-dropdown-link">Day 2</a>
+                    </li>
+                    <li class="header-acp__mobile-dropdown-item">
+                      <a href="day3.html" class="header-acp__mobile-dropdown-link">Day 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header-acp__mobile-nav-item header-acp__mobile-register">
+                <a class="btn btn-primary w-100" 
+                   href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com">
+                  Register
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </header>
 
 
     <!-- START OF THE BODY - KEEP HERO SECTION FIRST, THEN SCHEDULE AND SO ON -->
@@ -1018,8 +1181,18 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     
-    <!-- ACP Header Loader -->
-    <script src="assets/js/header-loader.js"></script>
+    <!-- ACP Header Scroll Effect -->
+    <script>
+      // Simple scroll effect for header
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header-acp');
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    </script>
     <div></div>
   </body>
 </html>
