@@ -40,7 +40,6 @@
     <header id="header" class="acp-header-new">
       <div class="container-fluid">
         <div class="acp-header-row">
-          
           <!-- Logo + Text (Left) -->
           <div class="acp-logo-section">
             <a href="index.html">
@@ -84,14 +83,16 @@
           </nav>
 
           <!-- Register Button (Right) -->
-          <a href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com" 
-             class="acp-register-btn">Register</a>
+          <a
+            href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com"
+            class="acp-register-btn"
+            >Register</a
+          >
 
           <!-- Mobile Hamburger (Right, mobile only) -->
           <button class="acp-mobile-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav">
             <i class="bi bi-list"></i>
           </button>
-
         </div>
       </div>
 
@@ -105,7 +106,9 @@
           <div class="acp-mobile-nav">
             <a href="#hero">Home</a>
             <div class="acp-mobile-dropdown">
-              <a href="#" data-bs-toggle="collapse" data-bs-target="#mobileConference">Conference <i class="bi bi-chevron-down"></i></a>
+              <a href="#" data-bs-toggle="collapse" data-bs-target="#mobileConference"
+                >Conference <i class="bi bi-chevron-down"></i
+              ></a>
               <div class="collapse" id="mobileConference">
                 <a href="#schedule">Schedule</a>
                 <a href="#speakers">Speakers</a>
@@ -116,7 +119,9 @@
               </div>
             </div>
             <div class="acp-mobile-dropdown">
-              <a href="#" data-bs-toggle="collapse" data-bs-target="#mobileEvents">Events <i class="bi bi-chevron-down"></i></a>
+              <a href="#" data-bs-toggle="collapse" data-bs-target="#mobileEvents"
+                >Events <i class="bi bi-chevron-down"></i
+              ></a>
               <div class="collapse" id="mobileEvents">
                 <a href="welcome-to-mobile.html">Welcome to Mobile</a>
                 <a href="evening-events.html">Evening Events</a>
@@ -126,15 +131,20 @@
               </div>
             </div>
             <div class="acp-mobile-dropdown">
-              <a href="#" data-bs-toggle="collapse" data-bs-target="#mobileDaily">Daily Publish <i class="bi bi-chevron-down"></i></a>
+              <a href="#" data-bs-toggle="collapse" data-bs-target="#mobileDaily"
+                >Daily Publish <i class="bi bi-chevron-down"></i
+              ></a>
               <div class="collapse" id="mobileDaily">
                 <a href="day1.html">Day 1</a>
                 <a href="day2.html">Day 2</a>
                 <a href="day3.html">Day 3</a>
               </div>
             </div>
-            <a href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com" 
-               class="acp-mobile-register-btn">Register</a>
+            <a
+              href="https://charlie.amberplains.com/fmi/webd/AFCPWebRegistration?homeurl=http://www.communitypublishers.com"
+              class="acp-mobile-register-btn"
+              >Register</a
+            >
           </div>
         </div>
       </div>
@@ -152,36 +162,36 @@
         padding: 20px 0;
         transition: all 0.3s ease;
       }
-      
+
       .acp-header-new.scrolled {
         background: rgba(1, 8, 33, 0.82);
         box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
       }
-      
+
       .acp-header-row {
         display: flex;
         align-items: center;
         min-height: 60px;
         padding: 0 15px;
       }
-      
+
       /* Logo Section */
       .acp-logo-section {
         flex: 1;
       }
-      
+
       .acp-logo-section a {
         display: flex;
         align-items: center;
         text-decoration: none;
         color: white;
       }
-      
+
       .acp-logo-section img {
         height: 40px;
         margin-right: 8px;
       }
-      
+
       .acp-logo-text {
         font-size: 0.85rem;
         line-height: 1.1;
@@ -189,7 +199,7 @@
         max-width: 200px;
         font-family: var(--heading-font);
       }
-      
+
       /* Desktop Navigation */
       .acp-nav-section {
         display: none;
@@ -198,7 +208,7 @@
         margin-right: 20px;
         margin-left: 30px;
       }
-      
+
       .acp-nav-link {
         color: rgba(255, 255, 255, 0.65);
         text-decoration: none;
@@ -209,13 +219,13 @@
         font-family: var(--nav-font);
         font-size: 15px;
       }
-      
+
       .acp-nav-link:hover,
       .acp-nav-link.active {
         color: white;
         text-decoration: none;
       }
-      
+
       .acp-nav-link.active::before {
         content: "";
         position: absolute;
@@ -225,12 +235,12 @@
         height: 2px;
         background: var(--accent-color);
       }
-      
+
       /* Dropdown */
       .acp-nav-dropdown {
         position: relative;
       }
-      
+
       .acp-dropdown-menu {
         position: absolute;
         top: 100%;
@@ -245,12 +255,12 @@
         transition: 0.3s;
         z-index: 99;
       }
-      
+
       .acp-nav-dropdown:hover .acp-dropdown-menu {
         opacity: 1;
         visibility: visible;
       }
-      
+
       .acp-dropdown-menu a {
         display: block;
         padding: 10px 20px;
@@ -258,11 +268,11 @@
         text-decoration: none;
         transition: 0.3s;
       }
-      
+
       .acp-dropdown-menu a:hover {
         color: var(--nav-dropdown-hover-color);
       }
-      
+
       /* Register Button */
       .acp-register-btn {
         display: none;
@@ -275,13 +285,13 @@
         transition: 0.3s;
         font-size: 14px;
       }
-      
+
       .acp-register-btn:hover {
         background: color-mix(in srgb, var(--accent-color), transparent 15%);
         color: var(--contrast-color);
         text-decoration: none;
       }
-      
+
       /* Mobile Menu Button */
       .acp-mobile-menu-btn {
         background: transparent;
@@ -291,33 +301,33 @@
         padding: 8px;
         cursor: pointer;
       }
-      
+
       /* Desktop View (≥ 715px) */
       @media (min-width: 715px) {
         .acp-nav-section {
           display: flex;
         }
-        
+
         .acp-register-btn {
           display: inline-block;
         }
-        
+
         .acp-mobile-menu-btn {
           display: none;
         }
       }
-      
+
       /* Hide logo text at 875px and below */
       @media (max-width: 875px) {
         .acp-logo-text {
           display: none;
         }
-        
+
         .acp-nav-section {
           margin-left: 20px;
         }
       }
-      
+
       /* Mobile View (< 715px) */
       @media (max-width: 714px) {
         .acp-logo-text {
@@ -326,7 +336,7 @@
           display: none;
         }
       }
-      
+
       /* Mobile Navigation */
       .acp-mobile-nav a {
         display: block;
@@ -335,12 +345,12 @@
         text-decoration: none;
         border-bottom: 1px solid #eee;
       }
-      
+
       .acp-mobile-dropdown .collapse a {
         padding-left: 20px;
         font-size: 0.9rem;
       }
-      
+
       .acp-mobile-register-btn {
         display: block;
         background: var(--accent-color);
@@ -357,14 +367,15 @@
     <!-- START OF THE BODY - KEEP HERO SECTION FIRST, THEN SCHEDULE AND SO ON -->
 
     <main class="main">
-
       <!-- HERO SECTION -->
       <section id="hero" class="hero section dark-background">
         <img src="assets/img/heroImageACP.png" alt="" data-aos="fade-in" class="" />
 
         <div class="container d-flex flex-column align-items-center text-center mt-auto">
           <h2 data-aos="fade-up" data-aos-delay="100" class="">2025 ANNUAL<br />CONFERENCE & TRADE SHOW</h2>
-          <p data-aos="fade-up" data-aos-delay="200">September 11-12, Renaissance Mobile Riverview Plaza Hotel, Mobile, AL</p>
+          <p data-aos="fade-up" data-aos-delay="200">
+            September 11-12, Renaissance Mobile Riverview Plaza Hotel, Mobile, AL
+          </p>
           <div data-aos="fade-up" data-aos-delay="300" class="">
             <!-- Replace with video link for Mobile Conference -->
             <a href="./assets/video/ACP_Mobile_Promo.mp4" class="glightbox pulsating-play-btn mt-3"></a>
@@ -377,7 +388,12 @@
               <div class="col-lg-6">
                 <h2>About The Event</h2>
                 <p>
-                  Join us in Mobile, Alabama for the 2025 ACP Conference & Trade Show — a special celebration marking ACP’s 75th Anniversary! Set against the vibrant backdrop of America’s original Mardi Gras city, this year’s event promises dynamic educational sessions, expanded keynotes with workshops, TLI sales classes, and top-tier networking. Highlights include the Leadership Certificate Program led by University of South Alabama professors and a festive Mardi Gras-themed evening complete with a parade, cocktails, and dancing. Don’t miss this milestone moment — let the good times roll!
+                  Join us in Mobile, Alabama for the 2025 ACP Conference & Trade Show — a special celebration marking
+                  ACP’s 75th Anniversary! Set against the vibrant backdrop of America’s original Mardi Gras city, this
+                  year’s event promises dynamic educational sessions, expanded keynotes with workshops, TLI sales
+                  classes, and top-tier networking. Highlights include the Leadership Certificate Program led by
+                  University of South Alabama professors and a festive Mardi Gras-themed evening complete with a parade,
+                  cocktails, and dancing. Don’t miss this milestone moment — let the good times roll!
                 </p>
               </div>
               <!-- <div class="col-lg-3">
@@ -394,21 +410,22 @@
       </section>
       <!-- END HERO SECTION -->
 
-<!-- SCHEDULE OF EVENTS -->
+      <!-- SCHEDULE OF EVENTS -->
 
       <section id="schedule" class="schedule section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Event Schedule<br /></h2>
- <div style="text-align: center; margin: 2em 0;">
-  <p style="color: #6A0DAD; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">
-    Apprendre, c’est l’étincelle — l’appliquer, c’est le défilé.
-  </p>
-  <div style="font-size: 1.5em; color: #FF0000; margin: 0.5em auto;">&#9884;</div>
-  <p style="color: #008000; font-style: italic; margin-top: 0.5em;">
-    “Learning is the spark — applying it is the parade.”
-  </p>
-</div>        </div>
+          <div style="text-align: center; margin: 2em 0">
+            <p style="color: #6a0dad; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em">
+              Apprendre, c’est l’étincelle — l’appliquer, c’est le défilé.
+            </p>
+            <div style="font-size: 1.5em; color: #ff0000; margin: 0.5em auto">&#9884;</div>
+            <p style="color: #008000; font-style: italic; margin-top: 0.5em">
+              “Learning is the spark — applying it is the parade.”
+            </p>
+          </div>
+        </div>
         <!-- End Section Title -->
 
         <div class="container">
@@ -425,10 +442,6 @@
           </ul>
 
           <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          
-
-
-
             <!-- Schdule Day 1 -->
             <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
               <div class="row schedule-item">
@@ -446,11 +459,10 @@
                 <div class="col-md-10">
                   <div class="speaker">
                     <a href="/mobile-sites-tour.html">
-                    <img src="assets/img/siteTour.jpg" alt="tour bus" />
+                      <img src="assets/img/siteTour.jpg" alt="tour bus" />
                     </a>
                   </div>
-                  <h4>
-                    <a href="/mobile-sites-tour.html">Sites Tour</a><span>*Additional Cost</span></h4>
+                  <h4><a href="/mobile-sites-tour.html">Sites Tour</a><span>*Additional Cost</span></h4>
                 </div>
               </div>
 
@@ -460,7 +472,10 @@
                   <div class="speaker">
                     <a href="#leadership"><img src="assets/img/speakers/speaker-2-2.jpg" alt="" /></a>
                   </div>
-                  <h4>Leadership Certificate Program <span>*Preregistration required with fee</span></h4>
+                  <h4>
+                    <a href="#leadership">Leadership Certificate Program</a
+                    ><span>*Preregistration required with fee</span>
+                  </h4>
                   <p>Communicating at the Top of Your Game</p>
                 </div>
               </div>
@@ -492,79 +507,129 @@
                   <div class="speaker">
                     <img src="assets/img/nightlife.jpg" alt="" />
                   </div>
-                  <h4><a href="/evening-events.html">Mobile!</a></span></h4>
+                  <h4><a href="/evening-events.html">Mobile!</a></h4>
                   <p>Explore the nightlife of Mobile</p>
                 </div>
               </div>
-
-               </div>
+            </div>
             <!-- End Schdule Day 1 -->
 
             <!-- Schdule Day 2 -->
             <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2">
               <div class="row schedule-item">
-                <div class="col-md-2"><time>10:00 AM</time></div>
+                <div class="col-md-2"><time>7:30 AM</time></div>
                 <div class="col-md-10">
                   <div class="speaker">
-                    <img src="assets/img/speakers/speaker-1-2.jpg" alt="Brenden Legros" />
+                    <img src="assets/img/registration.jpg" alt="" />
                   </div>
-                  <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                  <p>Facere provident incidunt quos voluptas.</p>
+                  <h4>Registration Open</h4>
                 </div>
               </div>
 
               <div class="row schedule-item">
-                <div class="col-md-2"><time>11:00 AM</time></div>
+                <div class="col-md-2"><time>7:45 - 8:45 AM</time></div>
                 <div class="col-md-10">
                   <div class="speaker">
                     <img src="assets/img/speakers/speaker-2-2.jpg" alt="Hubert Hirthe" />
                   </div>
-                  <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                  <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                  <h4>Peer Group Breakfast Roundtables</h4>
                 </div>
               </div>
 
               <div class="row schedule-item">
-                <div class="col-md-2"><time>12:00 AM</time></div>
+                <div class="col-md-2"><time>8:45 - 9:20 AM</time></div>
                 <div class="col-md-10">
                   <div class="speaker">
-                    <img src="assets/img/speakers/speaker-3-2.jpg" alt="Cole Emmerich" />
+                    <img src="assets/img/guyTasakaResize.jpg" alt="Guy Tasaka" />
                   </div>
-                  <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                  <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+                  <h4>Welcome & Keynote<span> with Guy Tasaka</span></h4>
                 </div>
               </div>
 
               <div class="row schedule-item">
-                <div class="col-md-2"><time>02:00 PM</time></div>
+                <div class="col-md-2"><time>10:30 AM - 12:00 PM</time></div>
                 <div class="col-md-10">
                   <div class="speaker">
                     <img src="assets/img/speakers/speaker-4-2.jpg" alt="Jack Christiansen" />
                   </div>
-                  <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                  <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                  <h4>Coffee & Speed Networking</h4>
                 </div>
               </div>
 
               <div class="row schedule-item">
-                <div class="col-md-2"><time>03:00 PM</time></div>
+                <div class="col-md-2"><time>12:00 PM - 1:00 PM</time></div>
                 <div class="col-md-10">
                   <div class="speaker">
                     <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel" />
                   </div>
-                  <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                  <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+                  <h4>Recognition Lunch - Industry Awards</h4>
                 </div>
               </div>
 
               <div class="row schedule-item">
-                <div class="col-md-2"><time>04:00 PM</time></div>
+                <div class="col-md-2"><time>1:00 PM - 2:10 PM</time></div>
                 <div class="col-md-10">
                   <div class="speaker">
                     <img src="assets/img/speakers/speaker-6.jpg" alt="Willow Trantow" />
                   </div>
-                  <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                  <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+                  <h4>Breakout Sessions:</h4>
+                  <p>
+                    Sales Track: TLI Classes (2 to choose from)
+                    <br />
+                    Leadership Track: Workshop with Guy Tasaka
+                    <br />
+                    Trade Show Open
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>2:15 PM - 3:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel" />
+                  </div>
+                  <h4>Coffee & Vendor Interaction Session</h4>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>2:15 PM - 3:15 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel" />
+                  </div>
+                  <h4>Rising Stars Special Session</h4>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>3:00 PM - 4:30 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel" />
+                  </div>
+                  <h4>Idea Exchange Mardi Gras Style</h4>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>12:00 PM - 1:00 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="assets/img/rossFurukaraResize.jpg" alt="Ross Furukawa" />
+                  </div>
+                  <h4>Keynote <span>with Ross Furukawa</span></h4>
+                </div>
+              </div>
+
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>6:30 PM - 9:30 PM</time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel" />
+                  </div>
+                  <h4>Mardis Gras Parade & Celebration <span>*additional cost</span></h4>
                 </div>
               </div>
             </div>
@@ -643,27 +708,22 @@
         </div>
       </section>
 
-
-
-
-<!-- END SCHEDULE OF EVENTS -->
-
+      <!-- END SCHEDULE OF EVENTS -->
 
       <!-- Speakers Section -->
       <section id="speakers" class="speakers section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Event Speakers<br /></h2>
-          <div style="text-align: center; margin: 2em 0;">
-  <p style="color: #6A0DAD; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">
-    Les grandes voix ne font pas que parler — elles inspirent des idées, des actions et du changement.
-  </p>
-  <div style="font-size: 1.5em; color: #FF0000; margin: 0.5em auto;">&#9884;</div>
-  <p style="color: #008000; font-style: italic; margin-top: 0.5em;">
-    “Great voices don’t just speak — they spark ideas, action, and change.”
-  </p>
-</div>
-
+          <div style="text-align: center; margin: 2em 0">
+            <p style="color: #6a0dad; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em">
+              Les grandes voix ne font pas que parler — elles inspirent des idées, des actions et du changement.
+            </p>
+            <div style="font-size: 1.5em; color: #ff0000; margin: 0.5em auto">&#9884;</div>
+            <p style="color: #008000; font-style: italic; margin-top: 0.5em">
+              “Great voices don’t just speak — they spark ideas, action, and change.”
+            </p>
+          </div>
         </div>
         <!-- End Section Title -->
 
@@ -749,177 +809,231 @@
       </section>
       <!-- /Speakers Section -->
 
-         <!-- Leadership Program Section -->
-<section id="leadership" class="sponsors section light-background">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Leadership Program</h2>
-    <div style="text-align: center; margin: 2em 0;">
-      <p style="color: #6A0DAD; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">
-        Les grands leaders n'arrêtent jamais d'apprendre — ils deviennent simplement meilleurs à écouter.
-      </p>
-      <div style="font-size: 1.5em; color: #FF0000; margin: 0.5em auto;">&#9884;</div>
-      <p style="color: #008000; font-style: italic; margin-top: 0.5em;">
-        "Great leaders never stop learning — they just get better at listening."
-      </p>
-    </div>
-  </div>
-  <!-- End Section Title -->
-  
-  <!-- Workshop Details -->
-  <div class="container" style="padding: 2.5em; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" data-aos="fade-up" data-aos-delay="200">
-    <h4 class="schedule schedule-item" style="text-align: center; margin-bottom: 1.5em; color: #333;">"Communicating at the Top of Your Game"</h4>
-    <p class="class-description" style="text-align: justify; line-height: 1.6; color: #555; margin-bottom: 3em;">If you have ever experienced business communication problems, this interactive session is for you. In this session, we will explore some of the problems in business communication and suggest practical tools to deal with them. As publishers and managers, you are skilled in many aspects of communication. However, you may find yourself grappling with changing communication methods and others' expectations. Moreover, your academic training and work experience may not have fully prepared you for what you are facing in business settings, such as negotiation, working in teams, hiring, firing, and managing employees and freelancers.</p>
-    
-    <!-- Presenters Layout -->
-    <div class="row align-items-start">
-      <!-- Picture 1 -->
-      <div class="col-lg-3 col-md-6 order-1" data-aos="fade-up" data-aos-delay="300">
-        <div class="text-center">
-          <img src="assets/img/Jeanne_640px.jpg" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;" alt="Dr Jeanne Maes" />
+      <!-- Leadership Program Section -->
+      <section id="leadership" class="sponsors section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Leadership Program</h2>
+          <div style="text-align: center; margin: 2em 0">
+            <p style="color: #6a0dad; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em">
+              Les grands leaders n'arrêtent jamais d'apprendre — ils deviennent simplement meilleurs à écouter.
+            </p>
+            <div style="font-size: 1.5em; color: #ff0000; margin: 0.5em auto">&#9884;</div>
+            <p style="color: #008000; font-style: italic; margin-top: 0.5em">
+              "Great leaders never stop learning — they just get better at listening."
+            </p>
+          </div>
         </div>
-      </div>
-      
-      <!-- Bio 1 -->
-      <div class="col-lg-3 col-md-6 order-2" data-aos="fade-up" data-aos-delay="400">
-        <div class="presenter-bio">
-          <h5 style="color: #333; margin-bottom: 1em;">Dr Jeanne Maes</h5>
-          <p style="font-size: 0.9em; line-height: 1.5; color: #666;">Dr. Jeanne Maes is a Professor of Management at the Mitchell College of Business and also serves as Ombudsperson at the University of South Alabama. She specializes in organizational communication, negotiation, and alternative dispute resolution. A consultant, certified coach, facilitator, mediator, and executive trainer, she has worked with clients throughout the U.S. and internationally.  
-</p>
-         
-        </div>
-      </div>
-      
-      <!-- Bio 2 -->
-      <div class="col-lg-3 col-md-6 order-4 order-md-3" data-aos="fade-up" data-aos-delay="500">
-        <div class="presenter-bio">
-          <h5 style="color: #333; margin-bottom: 1em;">Dr. Jennifer C. Zoghby</h5>
-          <p style="font-size: 0.9em; line-height: 1.5; color: #666;">Dr. Jennifer C. Zoghby serves as Assistant Professor of Management at the Mitchell College of Business at the University of South Alabama. Her research centers on entrepreneurship. She has led several training seminars for local and regional groups, including entrepreneurs and health care executives.
-</p>
-          
-        </div>
-      </div>
-      
-      <!-- Picture 2 -->
-      <div class="col-lg-3 col-md-6 order-3 order-md-4" data-aos="fade-up" data-aos-delay="600">
-        <div class="text-center">
-          <img src="assets/img/zoghby_640px.jpg" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;" alt="Dr. Jennifer C. Zoghby" />
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Speakers Section -->
-  <section id="leadership-bios" class="speakers section">
-  </section>
-</section>
-<!-- End Leadership Program -->
+        <!-- End Section Title -->
 
-<!-- TLI CLASS SECTION -->
-<section id="tli" class="schedule section">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>TLI Classes<br /></h2>
-  </div>
-  <!-- End Section Title -->
+        <!-- Workshop Details -->
+        <div
+          class="container"
+          style="padding: 2.5em; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h4 class="schedule schedule-item" style="text-align: center; margin-bottom: 1.5em; color: #333">
+            "Communicating at the Top of Your Game"
+          </h4>
+          <p class="class-description" style="text-align: justify; line-height: 1.6; color: #555; margin-bottom: 3em">
+            If you have ever experienced business communication problems, this interactive session is for you. In this
+            session, we will explore some of the problems in business communication and suggest practical tools to deal
+            with them. As publishers and managers, you are skilled in many aspects of communication. However, you may
+            find yourself grappling with changing communication methods and others' expectations. Moreover, your
+            academic training and work experience may not have fully prepared you for what you are facing in business
+            settings, such as negotiation, working in teams, hiring, firing, and managing employees and freelancers.
+          </p>
 
-  <div class="container">
-    <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-      <!-- TLI Classes -->
-      <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="tli-classes">
-              
+          <!-- Presenters Layout -->
+          <div class="row align-items-start">
+            <!-- Picture 1 -->
+            <div class="col-lg-3 col-md-6 order-1" data-aos="fade-up" data-aos-delay="300">
+              <div class="text-center">
+                <img
+                  src="assets/img/Jeanne_640px.jpg"
+                  class="img-fluid rounded-circle"
+                  style="width: 200px; height: 200px; object-fit: cover"
+                  alt="Dr Jeanne Maes"
+                />
+              </div>
+            </div>
 
-        <div class="row schedule-item tli-schedule-item">
-                    <div class="tli-divider"></div>
-          <div class="col-md-2">Date & Location</div>
-          <div class="col-md-10 tli-content">
-                        <h4>Increase Your Sales & Create Long Term Customers <span>Jolene Goodman</span></h4>
-            <p><strong>TLI 114</strong></p>
-            <p>In this class, you'll explore proven strategies for selling through long-term contracts, mastering the art of upselling, and creating persuasive proposals that secure commitment and growth. Gain the skills and insights needed to deliver exceptional value and build customer loyalty for the long haul.</p>
+            <!-- Bio 1 -->
+            <div class="col-lg-3 col-md-6 order-2" data-aos="fade-up" data-aos-delay="400">
+              <div class="presenter-bio">
+                <h5 style="color: #333; margin-bottom: 1em">Dr Jeanne Maes</h5>
+                <p style="font-size: 0.9em; line-height: 1.5; color: #666">
+                  Dr. Jeanne Maes is a Professor of Management at the Mitchell College of Business and also serves as
+                  Ombudsperson at the University of South Alabama. She specializes in organizational communication,
+                  negotiation, and alternative dispute resolution. A consultant, certified coach, facilitator, mediator,
+                  and executive trainer, she has worked with clients throughout the U.S. and internationally.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bio 2 -->
+            <div class="col-lg-3 col-md-6 order-4 order-md-3" data-aos="fade-up" data-aos-delay="500">
+              <div class="presenter-bio">
+                <h5 style="color: #333; margin-bottom: 1em">Dr. Jennifer C. Zoghby</h5>
+                <p style="font-size: 0.9em; line-height: 1.5; color: #666">
+                  Dr. Jennifer C. Zoghby serves as Assistant Professor of Management at the Mitchell College of Business
+                  at the University of South Alabama. Her research centers on entrepreneurship. She has led several
+                  training seminars for local and regional groups, including entrepreneurs and health care executives.
+                </p>
+              </div>
+            </div>
+
+            <!-- Picture 2 -->
+            <div class="col-lg-3 col-md-6 order-3 order-md-4" data-aos="fade-up" data-aos-delay="600">
+              <div class="text-center">
+                <img
+                  src="assets/img/zoghby_640px.jpg"
+                  class="img-fluid rounded-circle"
+                  style="width: 200px; height: 200px; object-fit: cover"
+                  alt="Dr. Jennifer C. Zoghby"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Speakers Section -->
+        <section id="leadership-bios" class="speakers section"></section>
+      </section>
+      <!-- End Leadership Program -->
 
-<div class="row schedule-item tli-schedule-item">
-                              <div class="tli-divider"></div>
+      <!-- TLI CLASS SECTION -->
+      <section id="tli" class="schedule section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>TLI Classes<br /></h2>
+        </div>
+        <!-- End Section Title -->
 
-          <div class="col-md-2">Date & Location</div>
-          <div class="col-md-10 tli-content">
-           
-            <h4>Mastering Your Rate Card: Build, Present, and Profit <span>Charity Huff</span></h4>
-            <p><strong>TLI 220</strong></p>
-            <p>Your rate card isn't just a pricing sheet - it's a strategic tool that can drive revenue, showcase value, and build lasting partnerships. In this session, we'll dive into how to build a compelling rate card that aligns with your offerings and your market. We'll also explore the best practices for using your rate card in proposals and renewals to ensure you're maximizing every opportunity. Whether you're starting from scratch or looking to refine what you already have, this class will give you actionable tips and real-world examples to make your rate card work harder for you.</p>
+        <div class="container">
+          <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <!-- TLI Classes -->
+            <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="tli-classes">
+              <div class="row schedule-item tli-schedule-item">
+                <div class="tli-divider"></div>
+                <div class="col-md-2">Date & Location</div>
+                <div class="col-md-10 tli-content">
+                  <h4>Increase Your Sales & Create Long Term Customers <span>Jolene Goodman</span></h4>
+                  <p><strong>TLI 114</strong></p>
+                  <p>
+                    In this class, you'll explore proven strategies for selling through long-term contracts, mastering
+                    the art of upselling, and creating persuasive proposals that secure commitment and growth. Gain the
+                    skills and insights needed to deliver exceptional value and build customer loyalty for the long
+                    haul.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item tli-schedule-item">
+                <div class="tli-divider"></div>
+
+                <div class="col-md-2">Date & Location</div>
+                <div class="col-md-10 tli-content">
+                  <h4>Mastering Your Rate Card: Build, Present, and Profit <span>Charity Huff</span></h4>
+                  <p><strong>TLI 220</strong></p>
+                  <p>
+                    Your rate card isn't just a pricing sheet - it's a strategic tool that can drive revenue, showcase
+                    value, and build lasting partnerships. In this session, we'll dive into how to build a compelling
+                    rate card that aligns with your offerings and your market. We'll also explore the best practices for
+                    using your rate card in proposals and renewals to ensure you're maximizing every opportunity.
+                    Whether you're starting from scratch or looking to refine what you already have, this class will
+                    give you actionable tips and real-world examples to make your rate card work harder for you.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item tli-schedule-item">
+                <div class="tli-divider"></div>
+
+                <div class="col-md-2">Date & Location</div>
+                <div class="col-md-10 tli-content">
+                  <h4>Leveraging Your CVC Audit & CVC Sales Proposal Tool</h4>
+                  <p><strong>TLI 221</strong></p>
+                  <p>
+                    Do you use these ACP Member Benefits? Statistics can be a powerful and informative part of an
+                    advertising sales presentation if used effectively. Understanding which publishing statistics to
+                    incorporate into your sales presentation to keep it interesting and informative but without
+                    overwhelming your audience with numbers is the key. The right balance is sure to move your prospect
+                    to action. We'll show you how to use these valuable tools to maximize your revenue.
+                  </p>
+                </div>
+              </div>
+              <div class="row schedule-item tli-schedule-item">
+                <div class="tli-divider"></div>
+
+                <div class="col-md-2">Date & Location</div>
+                <div class="col-md-10 tli-content">
+                  <h4>Digital Sales Success Part 3 <span>Manuel Karam</span></h4>
+                  <p><strong>TLI 256</strong></p>
+                  <p>
+                    Building on the foundational concepts from TLI 230 and TLI 254, this course takes your understanding
+                    of digital media strategy to the next level. While previous courses focused on identifying what to
+                    sell and how to integrate print and digital sales effectively, this class shifts the focus to the
+                    structural aspects of digital. You'll explore how to leverage digital tools and strategies to evolve
+                    into a full-service media company to position yourself for continued growth.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item tli-schedule-item">
+                <div class="tli-divider"></div>
+
+                <div class="col-md-2">Date & Location</div>
+                <div class="col-md-10 tli-content">
+                  <h4>Taking a Walk in an Entrepreneur's Shoes <span>Kara Ivison</span></h4>
+                  <p><strong>TLI 260</strong></p>
+                  <p>
+                    Kara was able to see first-hand just how many steps there are to start a new, small businesses,
+                    having gone through the process herself. She used that experience to create a checklist to help new
+                    businesses and to rethink how we can support them, well before advertising comes into play. In this
+                    session she'll be sharing ideas for publishers to connect with new, local businesses from day one -
+                    even in ways that go well before advertising.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row schedule-item tli-schedule-item">
+                <div class="tli-divider"></div>
+                <div class="col-md-2"><time>Date & Location</time></div>
+                <div class="col-md-10 tli-content">
+                  <h4>How to Sell Advertising in 2025 with AI <span>Kenny Katzgrau</span></h4>
+                  <p><strong>TLI 261</strong></p>
+                  <p>
+                    Discover the future of advertising in this game-changing session led by Broadstreet Founder and
+                    Publisher Kenny Katzgrau. Kenny will reveal cutting-edge strategies for leveraging AI to boost ad
+                    sales and streamline your workflow. Whether you’re new to AI or looking to enhance your sales
+                    techniques, this session will equip you with actionable insights to stay ahead in the ever-evolving
+                    digital advertising landscape.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End TLI Classes -->
           </div>
         </div>
-
-        <div class="row schedule-item tli-schedule-item">
-                              <div class="tli-divider"></div>
-
-          <div class="col-md-2">Date & Location</div>
-          <div class="col-md-10 tli-content">
-          
-            <h4>Leveraging Your CVC Audit & CVC Sales Proposal Tool</h4>
-            <p><strong>TLI 221</strong></p>
-            <p>Do you use these ACP Member Benefits? Statistics can be a powerful and informative part of an advertising sales presentation if used effectively. Understanding which publishing statistics to incorporate into your sales presentation to keep it interesting and informative but without overwhelming your audience with numbers is the key. The right balance is sure to move your prospect to action. We'll show you how to use these valuable tools to maximize your revenue.</p>
-          </div>
-        </div>
-        <div class="row schedule-item tli-schedule-item">
-                              <div class="tli-divider"></div>
-
-          <div class="col-md-2">Date & Location</div>
-          <div class="col-md-10 tli-content">
-            
-            <h4>Digital Sales Success Part 3 <span>Manuel Karam</span></h4>
-            <p><strong>TLI 256</strong></p>
-            <p>Building on the foundational concepts from TLI 230 and TLI 254, this course takes your understanding of digital media strategy to the next level. While previous courses focused on identifying what to sell and how to integrate print and digital sales effectively, this class shifts the focus to the structural aspects of digital. You'll explore how to leverage digital tools and strategies to evolve into a full-service media company to position yourself for continued growth.</p>
-          </div>
-        </div>
-
-        <div class="row schedule-item tli-schedule-item">
-                              <div class="tli-divider"></div>
-
-          <div class="col-md-2">Date & Location</div>
-          <div class="col-md-10 tli-content">
-            <h4>Taking a Walk in an Entrepreneur's Shoes <span>Kara Ivison</span></h4>
-            <p><strong>TLI 260</strong></p>
-            <p>Kara was able to see first-hand just how many steps there are to start a new, small businesses, having gone through the process herself. She used that experience to create a checklist to help new businesses and to rethink how we can support them, well before advertising comes into play. In this session she'll be sharing ideas for publishers to connect with new, local businesses from day one - even in ways that go well before advertising.</p>
-          </div>
-        </div>
-        
-        <div class="row schedule-item tli-schedule-item">
-          <div class="tli-divider"></div>
-          <div class="col-md-2"><time>Date & Location</time></div>
-          <div class="col-md-10 tli-content">
-            <h4>How to Sell Advertising in 2025 with AI <span>Kenny Katzgrau</span></h4>
-            <p><strong>TLI 261</strong></p>
-            <p>Discover the future of advertising in this game-changing session led by Broadstreet Founder and Publisher Kenny Katzgrau. Kenny will reveal cutting-edge strategies for leveraging AI to boost ad sales and streamline your workflow. Whether you’re new to AI or looking to enhance your sales techniques, this session will equip you with actionable insights to stay ahead in the ever-evolving digital advertising landscape.
-</p>
-          </div>
-        </div>
-      </div>
-      <!-- End TLI Classes -->
-    </div>
-  </div>
-</section>
-<!-- END TLI -->
-      
+      </section>
+      <!-- END TLI -->
 
       <!-- Venue Section -->
       <section id="venue" class="venue section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Event Venue<br /></h2>
-          <div style="text-align: center; margin: 2em 0;">
-  <p style="color: #6A0DAD; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">
-    Une grande célébration mérite un cadre grandiose — bienvenue au Riverview.
-  </p>
-  <div style="font-size: 1.5em; color: #FF0000; margin: 0.5em auto;">&#9884;</div>
-  <p style="color: #008000; font-style: italic; margin-top: 0.5em;">
-    “A grand celebration deserves a grand setting — welcome to the Riverview.”
-  </p>
-</div>
-
-       
+          <div style="text-align: center; margin: 2em 0">
+            <p style="color: #6a0dad; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em">
+              Une grande célébration mérite un cadre grandiose — bienvenue au Riverview.
+            </p>
+            <div style="font-size: 1.5em; color: #ff0000; margin: 0.5em auto">&#9884;</div>
+            <p style="color: #008000; font-style: italic; margin-top: 0.5em">
+              “A grand celebration deserves a grand setting — welcome to the Riverview.”
+            </p>
+          </div>
         </div>
         <!-- End Section Title -->
 
@@ -1024,27 +1138,22 @@
       </section>
       <!-- /Venue Section -->
 
-  
-
       <!-- Sponsors Section -->
       <section id="sponsors" class="sponsors section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Sponsors</h2>
-<div style="text-align: center; margin: 2em 0;">
-  <p style="color: #6A0DAD; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">
-    Derrière chaque grand événement, il y a de grands sponsors.
-  </p>
-  <div style="font-size: 1.5em; color: #FF0000; margin: 0.5em auto;">&#9884;</div>
-  <p style="color: #008000; font-style: italic; margin-top: 0.5em;">
-    “Behind every great event is a great group of sponsors.”
-  </p>
-</div>
+          <div style="text-align: center; margin: 2em 0">
+            <p style="color: #6a0dad; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em">
+              Derrière chaque grand événement, il y a de grands sponsors.
+            </p>
+            <div style="font-size: 1.5em; color: #ff0000; margin: 0.5em auto">&#9884;</div>
+            <p style="color: #008000; font-style: italic; margin-top: 0.5em">
+              “Behind every great event is a great group of sponsors.”
+            </p>
+          </div>
         </div>
         <!-- End Section Title -->
-
-    
-
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row g-0 clients-wrap">
@@ -1066,15 +1175,27 @@
             </div>
             <div class="col-xl-3 col-md-4 client-logo">
               <span class="tier-badge gold">Gold</span>
-              <img src="img/Sponsors/Gold/Metro Creative Graphics.png" class="img-fluid" alt="Metro Creative Graphics" />
+              <img
+                src="img/Sponsors/Gold/Metro Creative Graphics.png"
+                class="img-fluid"
+                alt="Metro Creative Graphics"
+              />
             </div>
             <div class="col-xl-3 col-md-4 client-logo">
               <span class="tier-badge silver">Silver</span>
-              <img src="img/Sponsors/Silver/Advantage Newspaper Consultants.png" class="img-fluid" alt="Advantage Newspaper Consultants" />
+              <img
+                src="img/Sponsors/Silver/Advantage Newspaper Consultants.png"
+                class="img-fluid"
+                alt="Advantage Newspaper Consultants"
+              />
             </div>
             <div class="col-xl-3 col-md-4 client-logo">
               <span class="tier-badge silver">Silver</span>
-              <img src="img/Sponsors/Silver/Alternative Newsweekly Foundation.png" class="img-fluid" alt="Alternative Newsweekly Foundation" />
+              <img
+                src="img/Sponsors/Silver/Alternative Newsweekly Foundation.png"
+                class="img-fluid"
+                alt="Alternative Newsweekly Foundation"
+              />
             </div>
             <div class="col-xl-3 col-md-4 client-logo">
               <span class="tier-badge silver">Silver</span>
@@ -1102,30 +1223,31 @@
             </div>
             <div class="col-xl-3 col-md-4 client-logo">
               <span class="tier-badge silver">Silver</span>
-              <img src="img/Sponsors/Silver/Software Consulting Services.jpg" class="img-fluid" alt="Software Consulting Services" />
+              <img
+                src="img/Sponsors/Silver/Software Consulting Services.jpg"
+                class="img-fluid"
+                alt="Software Consulting Services"
+              />
             </div>
           </div>
         </div>
       </section>
       <!-- /Sponsors Section -->
 
-
-      
-
       <!-- Faq Section -->
       <section id="faq" class="faq section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Frequently Asked Questions</h2>
-<div style="text-align: center; margin: 2em 0;">
-  <p style="color: #6A0DAD; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">
-    De bonnes questions mènent à de grandes expériences — commençons.
-  </p>
-  <div style="font-size: 1.5em; color: #FF0000; margin: 0.5em auto;">&#9884;</div>
-  <p style="color: #008000; font-style: italic; margin-top: 0.5em;">
-    “Good questions lead to great experiences — let’s get started.”
-  </p>
-</div>
+          <div style="text-align: center; margin: 2em 0">
+            <p style="color: #6a0dad; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em">
+              De bonnes questions mènent à de grandes expériences — commençons.
+            </p>
+            <div style="font-size: 1.5em; color: #ff0000; margin: 0.5em auto">&#9884;</div>
+            <p style="color: #008000; font-style: italic; margin-top: 0.5em">
+              “Good questions lead to great experiences — let’s get started.”
+            </p>
+          </div>
         </div>
         <!-- End Section Title -->
 
@@ -1218,10 +1340,6 @@
         </div>
       </section>
       <!-- /Faq Section -->
-
-     
-
-     
     </main>
 
     <footer id="footer" class="footer dark-background">
@@ -1328,7 +1446,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-    
+
     <!-- ACP Header JS -->
     <script src="assets/js/acp-header.js"></script>
     <div></div>
