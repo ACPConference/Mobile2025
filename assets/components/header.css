@@ -1,0 +1,200 @@
+/* ACP New Header Styles */
+.acp-header-new {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0);
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.acp-header-new.scrolled {
+  background: rgba(1, 8, 33, 0.82);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+.acp-header-row {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding: 0 15px;
+}
+
+/* Logo Section */
+.acp-logo-section {
+  flex: 1;
+}
+
+.acp-logo-section a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.acp-logo-section img {
+  height: 40px;
+  margin-right: 8px;
+}
+
+.acp-logo-text {
+  font-size: 0.85rem;
+  line-height: 1.1;
+  font-weight: 700;
+  max-width: 200px;
+  font-family: var(--heading-font);
+}
+
+/* Desktop Navigation */
+.acp-nav-section {
+  display: none;
+  align-items: center;
+  gap: 25px;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+
+.acp-nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 0;
+  transition: 0.3s;
+  position: relative;
+  font-family: var(--nav-font);
+  font-size: 15px;
+}
+
+.acp-nav-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Dropdown */
+.acp-nav-dropdown {
+  position: relative;
+}
+
+.acp-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--nav-dropdown-background-color);
+  min-width: 200px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  border-radius: 4px;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 99;
+}
+
+.acp-nav-dropdown:hover .acp-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.acp-dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--nav-dropdown-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.acp-dropdown-menu a:hover {
+  color: var(--nav-dropdown-hover-color);
+}
+
+/* Register Button */
+.acp-register-btn {
+  display: none;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 8px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.acp-register-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+
+/* Mobile Menu Button */
+.acp-mobile-menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Desktop View (≥ 715px) */
+@media (min-width: 715px) {
+  .acp-nav-section {
+    display: flex;
+  }
+  
+  .acp-register-btn {
+    display: inline-block;
+  }
+  
+  .acp-mobile-menu-btn {
+    display: none;
+  }
+}
+
+/* Hide logo text at 875px and below */
+@media (max-width: 875px) {
+  .acp-logo-text {
+    display: none;
+  }
+  
+  .acp-nav-section {
+    margin-left: 20px;
+  }
+}
+
+/* Mobile View (< 715px) */
+@media (max-width: 714px) {
+  .acp-logo-text {
+    font-size: 0.75rem;
+    max-width: 180px;
+    display: none;
+  }
+}
+
+/* Mobile Navigation */
+.acp-mobile-nav a {
+  display: block;
+  padding: 10px 0;
+  color: #212529;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.acp-mobile-dropdown .collapse a {
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+.acp-mobile-register-btn {
+  display: block;
+  background: var(--accent-color);
+  color: white;
+  padding: 12px 20px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}

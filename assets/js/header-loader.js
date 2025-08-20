@@ -1,161 +1,101 @@
 /**
- * ACP Header Loader
- * Loads modular header components and handles scroll effects
+ * ACP Header Component Loader
+ * Loads the modular header component into pages
  */
 
-class ACPHeaderLoader {
-  constructor() {
-    this.isLoaded = false;
-    this.init();
-  }
+(function() {
+  'use strict';
 
-  async init() {
+  // Load header HTML
+  async function loadHeader() {
     try {
-      await this.loadHeader();
-      this.setupScrollEffects();
-      this.handleActiveNavigation();
-      this.isLoaded = true;
-      console.log('ACP Header loaded successfully');
-    } catch (error) {
-      console.error('Failed to load ACP Header:', error);
-    }
-  }
-
-  async loadHeader() {
-    const headerContainer = document.getElementById('acp-header-container');
-    if (!headerContainer) {
-      console.error('Header container not found. Please add <div id="acp-header-container"></div> to your HTML.');
-      return;
-    }
-
-    try {
-      const response = await fetch('components/header-acp.html');
+      const response = await fetch('assets/components/header.html');
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`Failed to load header: ${response.status}`);
       }
       const headerHTML = await response.text();
-      headerContainer.innerHTML = headerHTML;
-    } catch (error) {
-      console.error('Error loading header component:', error);
-      // Fallback: try relative path for subdirectory pages
-      try {
-        const fallbackResponse = await fetch('../components/header-acp.html');
-        if (!fallbackResponse.ok) {
-          throw new Error(`Fallback HTTP error! status: ${fallbackResponse.status}`);
-        }
-        const headerHTML = await fallbackResponse.text();
-        headerContainer.innerHTML = headerHTML;
-      } catch (fallbackError) {
-        console.error('Fallback header loading also failed:', fallbackError);
+      
+      // Insert header into placeholder
+      const placeholder = document.getElementById('header-placeholder');
+      if (placeholder) {
+        placeholder.innerHTML = headerHTML;
+        
+        // Initialize header functionality after loading
+        initializeHeader();
+      } else {
+        console.error('Header placeholder not found');
       }
+    } catch (error) {
+      console.error('Error loading header:', error);
     }
   }
 
-  setupScrollEffects() {
-    const header = document.querySelector('.header-acp');
-    if (!header) return;
-
-    let isScrolled = false;
-
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const shouldAddScrolled = scrollTop > 100;
-
-      if (shouldAddScrolled && !isScrolled) {
-        header.classList.add('scrolled');
-        isScrolled = true;
-      } else if (!shouldAddScrolled && isScrolled) {
-        header.classList.remove('scrolled');
-        isScrolled = false;
+  // Initialize header functionality
+  function initializeHeader() {
+    // Header scroll effect
+    function toggleHeaderScrolled() {
+      const header = document.querySelector('.acp-header-new');
+      if (header) {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
       }
-    };
+    }
 
-    // Throttle scroll events for better performance
-    let ticking = false;
-    const scrollListener = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
+    // Add scroll listeners
+    document.addEventListener('scroll', toggleHeaderScrolled);
+    window.addEventListener('load', toggleHeaderScrolled);
 
-    window.addEventListener('scroll', scrollListener);
-    
-    // Initial check
-    handleScroll();
-  }
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
 
-  handleActiveNavigation() {
-    // Get current page
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const currentHash = window.location.hash;
-
-    // Wait a bit for DOM to be ready
-    setTimeout(() => {
-      this.updateActiveNav(currentPage, currentHash);
-    }, 100);
-  }
-
-  updateActiveNav(currentPage, currentHash) {
-    const navLinks = document.querySelectorAll('.header-acp__nav-link, .header-acp__dropdown-item, .header-acp__mobile-nav-link, .header-acp__mobile-dropdown-link');
-    
-    navLinks.forEach(link => {
-      link.classList.remove('active');
+    // Active navigation highlighting
+    function updateActiveNav() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.acp-nav-link');
       
-      const href = link.getAttribute('href');
-      if (!href) return;
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
 
-      // Check for exact page match
-      if (href === currentPage || href.endsWith(currentPage)) {
-        link.classList.add('active');
-        return;
-      }
-
-      // Check for hash/anchor match on current page
-      if (currentPage === 'index.html' || currentPage === '') {
-        if (href === currentHash || (href.startsWith('#') && href === currentHash)) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
           link.classList.add('active');
         }
-      }
-
-      // Special case for home link
-      if ((href === '#hero' || href === 'index.html#hero' || href === 'index.html') && 
-          (currentPage === 'index.html' || currentPage === '')) {
-        link.classList.add('active');
-      }
-    });
-  }
-
-  // Public method to update active navigation (useful for SPA-like behavior)
-  setActiveNav(pageOrHash) {
-    const currentPage = pageOrHash.includes('#') ? 'index.html' : pageOrHash;
-    const currentHash = pageOrHash.includes('#') ? pageOrHash.split('#')[1] ? '#' + pageOrHash.split('#')[1] : '' : '';
-    this.updateActiveNav(currentPage, currentHash);
-  }
-
-  // Public method to check if header is loaded
-  isHeaderLoaded() {
-    return this.isLoaded;
-  }
-}
-
-// Auto-initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  window.acpHeader = new ACPHeaderLoader();
-});
-
-// Also initialize if script is loaded after DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    if (!window.acpHeader) {
-      window.acpHeader = new ACPHeaderLoader();
+      });
     }
-  });
-} else {
-  if (!window.acpHeader) {
-    window.acpHeader = new ACPHeaderLoader();
+
+    // Add active nav listeners
+    document.addEventListener('scroll', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
+
+    console.log('ACP Header loaded and initialized successfully');
   }
-}
+
+  // Load header when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadHeader);
+  } else {
+    loadHeader();
+  }
+
+})();
