@@ -37,11 +37,12 @@
 .acp-logo-section img {
   height: 40px;
   margin-right: 8px;
+  filter: brightness(0) invert(1) drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .acp-logo-text {
-  font-size: 0.85rem;
-  line-height: 1.1;
+  font-size: 0.9rem;
+  line-height: 1.4;
   font-weight: 700;
   max-width: 200px;
   font-family: var(--heading-font);
@@ -143,11 +144,11 @@
   .acp-nav-section {
     display: flex;
   }
-  
+
   .acp-register-btn {
     display: inline-block;
   }
-  
+
   .acp-mobile-menu-btn {
     display: none;
   }
@@ -158,7 +159,7 @@
   .acp-logo-text {
     display: none;
   }
-  
+
   .acp-nav-section {
     margin-left: 20px;
   }
