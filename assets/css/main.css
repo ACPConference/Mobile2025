@@ -1051,13 +1051,19 @@ section,
   display: inline-block;
 }
 
+.schedule .schedule-item .col-md-10 {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
 .schedule .schedule-item .speaker {
   width: 60px;
   height: 60px;
   overflow: hidden;
   border-radius: 50%;
-  float: left;
-  margin: 0 10px 10px 0;
+  flex-shrink: 0;
+  margin: 0;
 }
 
 .schedule .schedule-item .speaker img {
@@ -1065,6 +1071,11 @@ section,
   transform: translateX(-50%);
   margin-left: 50%;
   transition: all ease-in-out 0.3s;
+}
+
+.schedule .schedule-item .content-wrapper {
+  flex: 1;
+  min-width: 0;
 }
 
 .schedule .schedule-item h4 {
