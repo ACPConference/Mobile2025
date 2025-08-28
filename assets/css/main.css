@@ -41,16 +41,27 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
+  --background-color: #f2f2f3 !important;
+  --surface-color: #ffffff !important;
+}
+
+/* Automatic alternating section backgrounds */
+body section:nth-child(odd) {
   --background-color: #f2f2f3;
   --surface-color: #ffffff;
 }
 
+body section:nth-child(even) {
+  --background-color: #ffffff;
+  --surface-color: #ffffff;
+}
+
 .dark-background {
-  --background-color: #000820;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #001553;
-  --contrast-color: #ffffff;
+  --background-color: #000820 !important;
+  --default-color: #ffffff !important;
+  --heading-color: #ffffff !important;
+  --surface-color: #001553 !important;
+  --contrast-color: #ffffff !important;
 }
 
 /* Smooth scroll */
@@ -1078,6 +1089,13 @@ section,
   min-width: 0;
 }
 
+/* Override flexbox for TLI section */
+#tli .schedule-item .col-md-10 {
+  display: block !important;
+  align-items: unset;
+  gap: unset;
+}
+
 .schedule .schedule-item h4 {
   font-size: 18px;
   font-weight: 600;
@@ -1325,9 +1343,28 @@ section,
   transition: 0.3s;
 }
 
+.sponsors .client-logo a {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsors .client-logo a img {
+  padding: 0;
+  max-width: 80%;
+}
+
 @media (max-width: 640px) {
   .sponsors .client-logo img {
     padding: 30px;
+    max-width: 50%;
+  }
+  .sponsors .client-logo a {
+    padding: 30px;
+  }
+  .sponsors .client-logo a img {
+    padding: 0;
     max-width: 50%;
   }
 }
