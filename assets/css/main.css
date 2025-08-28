@@ -1355,17 +1355,31 @@ section,
   max-width: 80%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .sponsors .client-logo {
+    width: calc((100% - 16px) / 2);
+    aspect-ratio: 1;
+    height: auto;
+    margin-bottom: 16px;
+    flex: none;
+  }
+  .sponsors .client-logo:nth-child(odd) {
+    margin-right: 16px;
+  }
+  .sponsors .client-logo .tier-badge {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
   .sponsors .client-logo img {
-    padding: 30px;
-    max-width: 50%;
+    padding: 15px;
+    max-width: 85%;
   }
   .sponsors .client-logo a {
-    padding: 30px;
+    padding: 15px;
   }
   .sponsors .client-logo a img {
     padding: 0;
-    max-width: 50%;
+    max-width: 85%;
   }
 }
 
