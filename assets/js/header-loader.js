@@ -49,15 +49,23 @@
     window.addEventListener('load', toggleHeaderScrolled);
 
     // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+        const href = this.getAttribute('href');
+        const hashIndex = href.indexOf('#');
+        
+        if (hashIndex !== -1) {
+          const hash = href.substring(hashIndex);
+          const target = document.querySelector(hash);
+          
+          // Only prevent default if target exists on current page
+          if (target && (href.startsWith('#') || href.startsWith(window.location.pathname) || href.startsWith('index.html'))) {
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
         }
       });
     });
