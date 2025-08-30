@@ -61,6 +61,16 @@
           // Only prevent default if target exists on current page
           if (target && (href.startsWith('#') || href.startsWith(window.location.pathname) || href.startsWith('index.html'))) {
             e.preventDefault();
+            
+            // Close mobile menu if open
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav && mobileNav.classList.contains('show')) {
+              const bsOffcanvas = bootstrap.Offcanvas.getInstance(mobileNav);
+              if (bsOffcanvas) {
+                bsOffcanvas.hide();
+              }
+            }
+            
             target.scrollIntoView({
               behavior: 'smooth',
               block: 'start'
